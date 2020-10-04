@@ -1,19 +1,29 @@
+/*************************************************************************************
+* Author : Hedion
+* last updated @ 2020/10/4 15:55
+* Any question or assistances please contact: mailto:gao1021229073@163.com    
+* Please add me a friend: 1021229073 (QQ), contact me if any bugs or issues occured.
+* this project has been updated to Github:
+** https://github.com/Holit/HEU_edusys_miui
+***************************************************************************************/
+    
 //scheduleHtmlParser.js:Handle to source page data and create legal data structure
 
 function scheduleHtmlParser(html) {
+	//analyse the element and you will see this.
+	/*
+	<div id="5180478CC0C746CC94534AF06163E808-3-2" style="" class="kbcontent">
+	线性代数与解析几何A<br>
+	    <font title="老师">廉春波</font><br>
+	    <font title="周次">4-18(周)</font><br>
+	    <font title="节次">[0102节]</font><br>
+	    <font title="教室">21B 502中</font><br>
+	</div>
 
-    /*
-    Author : Hedion
-    last updated @ 2020/10/3/23:30
-    Any question or assistances please contact: mailto:gao1021229073@163.com
-
-    Current status: All run successfully
-    TODO:Waiting for E2E testing.
-
-    */
-    
+	this is the main entrance.
+	*/    
     let $raw = $('#kbtable .kbcontent').toArray();
-    //console.info($raw);
+    console.info($raw);
     let courses = [];
 
     let name = "";
@@ -109,7 +119,8 @@ function _get_section(data) {
     let i = 0;
     do {
         num = parseInt(data.substr(i, 2));
-        section.push(num);
+        //this will push an array such as {section:1},{section:2}...
+        section.push({"section":num});
         //jump to next number, such as
         //010203
         //|
