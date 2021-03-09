@@ -47,10 +47,11 @@ function scheduleHtmlParser(html) {
 
             //please notice these data are from object, therefore please check whether they are existed.
             //for rigorous, please check undefined
-            teacher = data.children[2].children[0].data;
-            weeks = data.children[4].children[0].data;
-            sections = data.children[6].children[0].data;
-            position = data.children[8].children[0].data;
+	    //here we checked undefined.
+	    teacher = (data.children[2] == undefined)?"未知":data.children[2].children[0].data;
+            weeks = (data.children[4] == undefined)?"未知":data.children[4].children[0].data;
+            sections = (data.children[6] == undefined)?"未知":data.children[6].children[0].data;
+            position = (data.children[8] == undefined)?"未知":data.children[8].children[0].data;
             
             //replace for creating the arry
             weeks=weeks.replace('(周)', '');
