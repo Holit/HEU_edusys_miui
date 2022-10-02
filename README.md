@@ -6,7 +6,7 @@
   * Release版本：E2E和Chrome测试通过
   * Debug版本或Hotfix版本：部分代码Console测试通过  
 * 教程文档  
-  * https://www.cnblogs.com/holittech/p/miui_schedule_document.html  
+  * https://www.cnblogs.com/hed10ne/p/miui_schedule_document.html
 ---------
 * 目的
 适配小爱同学课程表  
